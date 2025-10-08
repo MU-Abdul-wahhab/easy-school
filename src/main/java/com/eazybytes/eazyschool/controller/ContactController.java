@@ -50,6 +50,8 @@ public class ContactController {
         }
 
         contactSevice.saveMsg(contact);
+        contactSevice.setCounter(contactSevice.getCounter() + 1);
+        System.out.println("Number of time the contact form is submitted: " + contactSevice.getCounter());
 
         return "redirect:/contact";
     }
